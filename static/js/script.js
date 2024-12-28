@@ -10,6 +10,29 @@ document.querySelectorAll('input[name="url-type"]').forEach((radio) => {
     });
 });
 
+// Ensure the correct visibility of custom URL input on page load
+window.addEventListener('DOMContentLoaded', () => {
+    const customUrlBox = document.getElementById('custom-url-box');
+    if (document.getElementById('custom-url').checked) {
+        customUrlBox.style.display = 'block';
+    } else {
+        customUrlBox.style.display = 'none';
+    }
+});
+
+
+// Toggle visibility of the custom URL input box based on the selected radio button
+// document.querySelectorAll('input[name="url-type"]').forEach((radio) => {
+//     radio.addEventListener('change', () => {
+//         const customUrlBox = document.getElementById('custom-url-box');
+//         if (document.getElementById('custom-url').checked) {
+//             customUrlBox.style.display = 'block';
+//         } else {
+//             customUrlBox.style.display = 'none';
+//         }
+//     });
+// });
+
 // Handle the shorten button click
 document.getElementById('btn-short').addEventListener('click', async () => {
     const userURL = document.getElementById('input').value.trim();
