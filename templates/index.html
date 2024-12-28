@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>URL Shortner</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div id="container">
+        <h1 id="main-heading">URL Shortener</h1>
+        
+        <!-- Radio buttons for user selection -->
+        <div>
+            <input type="radio" id="random-url" name="url-type" value="random" checked>
+            <label for="random-url">Random URL</label>
+
+            <input type="radio" id="custom-url" name="url-type" value="custom">
+            <label for="custom-url">Custom URL</label>
+        </div>
+        
+        
+        
+        <!-- Main URL input -->
+        <input id="input" type="text" placeholder="Enter your URL here">
+
+        <!-- Input box for custom URL -->
+        <div id="custom-url-box" style="display: none;">
+            <input id="custom-input" type="text" placeholder="Enter your custom short URL">
+        </div>
+
+        <button id="btn-short">Shorten</button>
+        
+        <!-- Result section -->
+        <div id="result" style="display: none;">
+            <p>Your shortened URL: <a id="short-url" href="#" target="_blank"></a></p>
+            <button id="copy-btn">Copy URL</button>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

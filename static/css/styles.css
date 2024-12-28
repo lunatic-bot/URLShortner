@@ -1,0 +1,32 @@
+#container {
+    /* align-items: center;
+     */
+    display: flex;           /* Use flexbox layout */
+    flex-direction: column;  /* Align items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center;     /* Center items horizontally */
+    height: 50vh;           /* Make the container take the full height of the viewport */
+
+}
+
+#input {
+    padding: 10px 5px;
+    width: 500px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#btn-short {
+    padding: 10px 5px;
+    width: 100px; 
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#custom-input{
+    padding: 10px 5px;
+    width: 500px; 
+    border-radius: 5px;
+    margin-top: 10px;
+    align-items: center;
+}
