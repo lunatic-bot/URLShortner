@@ -12,10 +12,10 @@ import models, schemas, database
 app = FastAPI()
 
 # Mount the static files directory for CSS/JS
-app.mount("/static", StaticFiles(directory="static"), name="static")
+# app.mount("/static", StaticFiles(directory="static"), name="static")
 
-# Set up Jinja2 templates for rendering HTML
-templates = Jinja2Templates(directory="templates")
+# # Set up Jinja2 templates for rendering HTML
+# templates = Jinja2Templates(directory="templates")
 
 # Dependency to get the database session
 def get_db():
@@ -35,10 +35,10 @@ def generate_short_url(length=6):
     characters = string.ascii_letters + string.digits
     return ''.join(random.choice(characters) for _ in range(length))
 
-# Route to render the HTML page
-@app.get("/", response_class=HTMLResponse)
-def home(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+# # Route to render the HTML page
+# @app.get("/", response_class=HTMLResponse)
+# def home(request: Request):
+#     return templates.TemplateResponse("index.html", {"request": request})
 
 # Route to shorten the URL
 @app.post("/shorten/", response_model=schemas.URLResponse)
